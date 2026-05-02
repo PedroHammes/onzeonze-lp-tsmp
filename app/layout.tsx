@@ -22,7 +22,7 @@ const inter = localFont({
 const coolvetica = localFont({
   src: [
     {
-      path: './fonts/coolvetica/Coolvetica-HV-Comp.woff2',
+      path: './fonts/coolvetica/Coolvetica-Hv-Comp.woff2',
       weight: '800',
       style: 'normal',
     },
