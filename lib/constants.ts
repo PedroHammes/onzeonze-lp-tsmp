@@ -1,0 +1,1 @@
+export const HOTMART_URL = "https://hotmart.com/pt-br"
