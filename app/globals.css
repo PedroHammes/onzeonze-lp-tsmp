@@ -50,7 +50,7 @@
     @apply font-sans;
   }
   section {
-    @apply py-4 md:py-8;
+    @apply py-24;
   }
   h2 {
     @apply text-left w-full;
