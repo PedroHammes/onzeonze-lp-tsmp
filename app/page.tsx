@@ -3,6 +3,7 @@ import Section02Banner from "@/components/sections/section02Abbout";
 import Section03Differentiators from "@/components/sections/section03Differentiators";
 import Section04Features from "@/components/sections/section04Features";
 import Section05Details from "@/components/sections/section05Details";
+import Section06Audicence from "@/components/sections/section06Audience";
 
 export default function Home() {
 
@@ -13,6 +14,7 @@ export default function Home() {
       <Section03Differentiators />
       <Section04Features />
       <Section05Details />
+      <Section06Audicence />
     </main>
   );
 }
