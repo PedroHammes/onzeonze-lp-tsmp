@@ -4,6 +4,7 @@ import Section03Differentiators from "@/components/sections/section03Differentia
 import Section04Features from "@/components/sections/section04Features";
 import Section05Details from "@/components/sections/section05Details";
 import Section06Audicence from "@/components/sections/section06Audience";
+import Section07Payment from "@/components/sections/section07Payment";
 
 export default function Home() {
 
@@ -15,6 +16,7 @@ export default function Home() {
       <Section04Features />
       <Section05Details />
       <Section06Audicence />
+      <Section07Payment />
     </main>
   );
 }

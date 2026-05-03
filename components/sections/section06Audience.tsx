@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export default function Section06Audicence() {
     return (
-        <section className='relative flex flex-col gap-4 items-center justify-center px-8 bg-secondary'>
+        <section className='relative flex flex-col gap-4 items-center justify-center px-8'>
             {/* Imagem */}
             <div className="w-90 h-125 relative rounded-[4rem] overflow-hidden">
                 <Image 
