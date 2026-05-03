@@ -17,8 +17,8 @@ export default function Section01Banner() {
                 <a href={HOTMART_URL} target="_blank" rel="noopener noreferrer"
                 className='
                 font-sans bg-background text-foreground
-                p-2 rounded-xl
-                text-xs
+                p-2 rounded-xl w-fit
+                text-base
                 '>
                     QUERO GARANTIR
                 </a>
