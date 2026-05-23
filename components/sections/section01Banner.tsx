@@ -11,7 +11,7 @@ export default function Section01Banner() {
             className='object-cover z-0'
             />
             <div className="absolute inset-0 bg-linear-300 from-black/90 pointer-events-none" />
-            <div className='relative z-10 flex flex-col gap-8 justify-center items-center lg:p-10'>
+            <div className='relative z-10 flex flex-col gap-8 justify-center items-center lg:px-8'>
                 <h1 className='font-heading text-8xl lg:text-9xl text-background text-center'>Social Media Pro</h1>
                 <p className='font-sans text-background text-center text-2xl lg:text-4xl'>um sistema completo para facilitar e profissionalizar sua gestão de redes sociais</p>
                 <a href={HOTMART_URL} target="_blank" rel="noopener noreferrer"

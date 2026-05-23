@@ -8,25 +8,27 @@ export default function Section02Banner() {
         { title: "ESPAÇO CLIENTE", description: "O template ainda conta com um espaço do cliente, com comprovantes de pagamento, contrato de prestação de serviços e dados de logins de contas" },
     ]
     return (
-        <section className='relative flex flex-col gap-4 items-center justify-center px-8'>
-            <div className="w-90 h-125 relative rounded-[4rem] overflow-hidden">
+        <section className='relative flex flex-col lg:flex-row lg:items-stretch gap-4 items-center justify-center px-8'>
+            <div className="w-90 h-125 lg:h-auto lg:w-2/5 relative rounded-[4rem] overflow-hidden">
                 <Image 
                 src={"/ux/section-02-about/section-02-about.webp"}
-                alt="Sobre a empresa"
+                alt="Sobre"
                 fill
                 className="object-cover"
                 />
             </div>
             
-            <h2 className="font-heading text-5xl text-primary">O sistema mais completo do mercado</h2>
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-8 lg:w-3/5">
+                <h2 className="font-heading text-5xl text-primary">O sistema mais completo do mercado</h2>
                 {items.map((item, index) => (
                     <div key={index} className="
-                    flex flex-col py-4 gap-2 justify-center items-center
+                    flex flex-row py-4 gap-2 justify-center items-center
                     border-b border-foreground">
-                        <Diamond color="#a15035"/>
-                        <h3 className="font-bold text-base mb-2">{item.title}</h3>
-                        <p className="text-foreground">{item.description}</p>
+                        <Diamond color="#a15035" size={48}/>
+                        <div>
+                            <h3 className="font-bold text-base mb-2">{item.title}</h3>
+                            <p className="text-foreground">{item.description}</p>
+                        </div>
                     </div>
                 ))}
             </div>
