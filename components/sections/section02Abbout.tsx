@@ -8,7 +8,7 @@ export default function Section02Banner() {
         { title: "ESPAÇO CLIENTE", description: "O template ainda conta com um espaço do cliente, com comprovantes de pagamento, contrato de prestação de serviços e dados de logins de contas" },
     ]
     return (
-        <section className='relative flex flex-col lg:flex-row lg:items-stretch gap-4 items-center justify-center px-8'>
+        <section className='relative flex flex-col lg:flex-row lg:items-stretch gap-4 items-center justify-center px-8 lg:px-16'>
             <div className="w-90 h-125 lg:h-auto lg:w-2/5 relative rounded-[4rem] overflow-hidden">
                 <Image 
                 src={"/ux/section-02-about/section-02-about.webp"}

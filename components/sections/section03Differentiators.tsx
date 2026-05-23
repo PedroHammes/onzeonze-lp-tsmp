@@ -4,9 +4,9 @@ import Image from "next/image";
 export default function Section03Differentiators() {
 
     return (
-        <section  className='relative flex flex-col gap-4 items-center justify-center px-8 bg-secondary'>
+        <section  className='relative flex flex-col lg:flex-row gap-4 items-center justify-center px-8 lg:px-16 bg-secondary'>
             {/* Texto */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 lg:w-1/5">
                 <p className="font-sans text-foreground text-base">Liberdade geográfica para gerenciar com eficiência</p>
                 <h2 className="font-heading text-5xl text-foreground">Gerencie em qualquer lugar</h2>
                 <a href={HOTMART_URL} target="_blank" rel="noopener noreferrer"
@@ -17,12 +17,13 @@ export default function Section03Differentiators() {
             </div>
 
             {/* Imagem */}
-            <div>
+            <div className="lg:w-4/5">
                 <Image
-                src="/ux/section-03-differentiators/section-03-differentiators.webp"
-                alt="Gerencie em qualquer lugar"
-                width={400}
-                height={300}
+                    src="/ux/section-03-differentiators/section-03-differentiators.webp"
+                    alt="Gerencie em qualquer lugar"
+                    width={800}
+                    height={600}
+                    className="w-full h-auto"
                 />
             </div>
         </section>
