@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export default function Section06Audience() {
     return (
-        <section className='flex flex-col lg:flex-row gap-8 items-center justify-center px-8 lg:px-16'>
+        <section className='flex flex-col lg:flex-row gap-8 items-center justify-center px-8 lg:px-48'>
             {/* Texto */}
             <div className="flex flex-col gap-4 lg:w-1/2">
                 <h2 className="font-heading text-primary text-5xl lg:text-6xl">
@@ -33,7 +33,7 @@ export default function Section06Audience() {
 
             {/* Imagem */}
             <div className="lg:w-1/2 flex justify-center">
-                <div className="w-90 h-125 relative rounded-[4rem] overflow-hidden">
+                <div className="w-90 h-125 lg:w-full relative rounded-[4rem] overflow-hidden">
                     <Image 
                     src={"/ux/section-06-audience/audience.webp"}
                     alt="Para quem é o produto"

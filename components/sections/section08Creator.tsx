@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Section08Creator() {
     return (
-        <section className='flex flex-col lg:flex-row gap-8 items-center justify-center px-8 lg:px-16 bg-secondary'>
+        <section className='flex flex-col lg:flex-row gap-8 items-center justify-center px-8 lg:px-48 bg-secondary'>
             {/* Imagem */}
             <div className="lg:w-1/2 flex justify-center">
                 <div className="w-90 h-125 relative rounded-[4rem] overflow-hidden">

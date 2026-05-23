@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Section07Payment() {
     return (
-        <section className='flex flex-col lg:flex-row gap-8 items-center justify-center px-8 lg:px-16 bg-secondary'>
+        <section className='flex flex-col lg:flex-row gap-8 items-center justify-center px-8 lg:px-48 bg-secondary'>
             {/* Texto */}
             <div className="flex flex-col gap-4 lg:w-1/2">
                 <p className="font-sans text-foreground text-base lg:text-2xl">
@@ -21,7 +21,7 @@ export default function Section07Payment() {
 
             {/* Imagens */}
             <div className="flex flex-col gap-4 items-center lg:w-1/2">
-                <div className="w-90 h-60 relative rounded-[4rem] overflow-hidden">
+                <div className="w-90 h-60 lg:w-full relative rounded-[4rem] overflow-hidden">
                     <Image 
                     src={"/ux/section-07-payment/payment-1.webp"}
                     alt="Formas de pagamento"
@@ -29,7 +29,7 @@ export default function Section07Payment() {
                     className="object-cover"
                     />
                 </div>
-                <div className="w-90 h-60 relative rounded-[4rem] overflow-hidden">
+                <div className="w-90 h-60 lg:w-full relative rounded-[4rem] overflow-hidden">
                     <Image 
                     src={"/ux/section-07-payment/payment-2.webp"}
                     alt="Acesso ao produto"

@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Section04Features() {
     return(
-        <section className='flex flex-col lg:flex-row gap-8 items-center justify-center px-8 lg:px-16'>
+        <section className='flex flex-col lg:flex-row gap-8 items-center justify-center px-8 lg:px-48'>
             {/* Texto */}
             <div className="flex flex-col lg:w-1/2">
                 <h2 className="font-heading text-5xl lg:text-6xl text-primary">Otimize tempo nos relatórios de redes sociais</h2>
@@ -14,7 +14,7 @@ export default function Section04Features() {
 
             {/* Imagem */}
             <div className="lg:w-1/2 flex justify-center">
-                <div className="w-90 h-125 relative rounded-[4rem] overflow-hidden">
+                <div className="w-90 h-125 lg:w-full relative rounded-[4rem] overflow-hidden">
                     <Image 
                     src={"/ux/section-04-features/relatorios.webp"}
                     alt="Relatórios de redes sociais"
