@@ -1,1 +1,1 @@
-export const HOTMART_URL = "https://hotmart.com/pt-br"
+export const HOTMART_URL = "https://pay.kiwify.com.br/7BycUh3"
