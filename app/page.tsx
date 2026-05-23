@@ -6,6 +6,7 @@ import Section05Details from "@/components/sections/section05Details";
 import Section06Audicence from "@/components/sections/section06Audience";
 import Section07Payment from "@/components/sections/section07Payment";
 import Section08Creator from "@/components/sections/section08Creator";
+import Section09Video from "@/components/sections/section09Video";
 
 export default function Home() {
 
@@ -19,6 +20,7 @@ export default function Home() {
       <Section06Audicence />
       <Section07Payment />
       <Section08Creator />
+      <Section09Video />
     </main>
   );
 }
