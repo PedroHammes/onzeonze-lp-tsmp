@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Section04Features() {
     return(
-        <section className='flex flex-col lg:flex-row gap-8 items-center justify-center px-8'>
+        <section className='flex flex-col lg:flex-row gap-8 items-center justify-center px-8 lg:px-16'>
             {/* Texto */}
             <div className="flex flex-col lg:w-1/2">
                 <h2 className="font-heading text-5xl lg:text-6xl text-primary">Otimize tempo nos relatórios de redes sociais</h2>
