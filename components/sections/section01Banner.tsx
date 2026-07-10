@@ -16,10 +16,11 @@ export default function Section01Banner() {
                 <p className='font-sans text-background text-center text-2xl lg:text-4xl'>um sistema completo para facilitar e profissionalizar sua gestão de redes sociais</p>
                 <a href={HOTMART_URL} target="_blank" rel="noopener noreferrer"
                 className='
-                font-sans bg-background text-foreground
+                font-sans bg-background text-primary
                 p-2 rounded-xl w-fit
                 text-base 
                 lg:text-2xl lg:font-bold lg:p-4
+                hover:bg-primary hover:text-background transition-colors cursor-pointer duration-500
                 '>
                     QUERO GARANTIR
                 </a>

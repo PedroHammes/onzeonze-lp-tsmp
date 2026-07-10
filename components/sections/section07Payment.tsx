@@ -21,7 +21,7 @@ export default function Section07Payment() {
 
             {/* Imagens */}
             <div className="flex flex-col gap-4 items-center lg:w-1/2">
-                <div className="w-90 h-60 lg:w-full relative rounded-[4rem] overflow-hidden">
+                <div className="w-90 h-80 lg:w-full relative rounded-[4rem] overflow-hidden">
                     <Image 
                     src={"/ux/section-07-payment/payment-1.webp"}
                     alt="Formas de pagamento"
@@ -29,7 +29,7 @@ export default function Section07Payment() {
                     className="object-cover"
                     />
                 </div>
-                <div className="w-90 h-60 lg:w-full relative rounded-[4rem] overflow-hidden">
+                <div className="w-90 h-80 lg:w-full relative rounded-[4rem] overflow-hidden">
                     <Image 
                     src={"/ux/section-07-payment/payment-2.webp"}
                     alt="Acesso ao produto"
