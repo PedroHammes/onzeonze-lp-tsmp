@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { FileBarChart, TrendingUp, BarChart3 } from "lucide-react"
 
 export default function Section04Features() {
     return(
@@ -7,9 +8,17 @@ export default function Section04Features() {
             <div className="flex flex-col lg:w-1/2">
                 <h2 className="font-heading text-5xl lg:text-6xl text-primary">Otimize tempo nos relatórios de redes sociais</h2>
                 <p className="font-sans text-foreground text-base lg:text-2xl mt-4">Um espaço dedicado a armazenar os relatórios das redes sociais.</p>
-                <p className="font-sans text-foreground text-base lg:text-2xl mt-4">_Relatórios mensais</p>
-                <p className="font-sans text-foreground text-base lg:text-2xl">_Relatórios trimestrais</p>
-                <p className="font-sans text-foreground text-base lg:text-2xl">_Relatórios anuais</p>
+                <p className="flex flex-row gap-2 items-center font-sans text-foreground text-base lg:text-2xl mt-4">
+                    <FileBarChart color="#a15035" size={20}/>
+                    Relatórios mensais
+                </p>
+                <p className="flex flex-row gap-2 items-center font-sans text-foreground text-base lg:text-2xl">
+                    <TrendingUp color="#a15035" size={20}/>
+                    Relatórios trimestrais
+                </p>
+                <p className="flex flex-row gap-2 items-center font-sans text-foreground text-base lg:text-2xl">
+                    <BarChart3 color="#a15035" size={20}/>
+                    Relatórios anuais</p>
             </div>
 
             {/* Imagem */}

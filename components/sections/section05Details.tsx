@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CalendarCheck, ClipboardList, Activity, Grid3X3, Filter } from "lucide-react"
 
 export default function Section05Details() {
     return (
@@ -9,11 +10,26 @@ export default function Section05Details() {
                 <p className="font-sans text-foreground text-base lg:text-2xl">
                     O sistema conta com um calendário editorial para planejamento, criação e acompanhamento dos conteúdos de cada rede social. Incluindo relatório de performance com cálculo automático de taxa de engajamento e conversão de seguidores.
                 </p>
-                <p className="font-sans text-foreground text-base lg:text-2xl">_Calendário de publicação</p>
-                <p className="font-sans text-foreground text-base lg:text-2xl">_Briefing de conteúdo</p>
-                <p className="font-sans text-foreground text-base lg:text-2xl">_Relatório de performance</p>
-                <p className="font-sans text-foreground text-base lg:text-2xl">_Matriz de conteúdo</p>
-                <p className="font-sans text-foreground text-base lg:text-2xl">_Funil de vendas</p>
+                <p className="flex flex-row gap-2 items-center font-sans text-foreground text-base lg:text-2xl">
+                    <CalendarCheck color="#a15035" size={20}/>
+                    Calendário de publicação
+                </p>
+                <p className="flex flex-row gap-2 items-center font-sans text-foreground text-base lg:text-2xl">
+                    <ClipboardList color="#a15035" size={20}/>    
+                    Briefing de conteúdo
+                </p>
+                <p className="flex flex-row gap-2 items-center font-sans text-foreground text-base lg:text-2xl">
+                    <Activity color="#a15035" size={20}/>
+                    Relatório de performance
+                </p>
+                <p className="flex flex-row gap-2 items-center font-sans text-foreground text-base lg:text-2xl">
+                    <Grid3X3 color="#a15035" size={20}/>
+                    Matriz de conteúdo
+                </p>
+                <p className="flex flex-row gap-2 items-center font-sans text-foreground text-base lg:text-2xl">
+                    <Filter color="#a15035" size={20}/>   
+                    Funil de vendas
+                </p>
             </div>
 
             {/* Imagem */}

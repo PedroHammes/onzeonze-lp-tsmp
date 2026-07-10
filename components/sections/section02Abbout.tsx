@@ -17,10 +17,9 @@ export default function Section02Banner() {
             <div className="flex flex-col gap-8 lg:w-3/5">
                 <h2 className="font-heading text-5xl text-primary">O sistema mais completo do mercado</h2>
                     <div className="
-                    flex flex-row py-4 gap-2 justify-center items-center
-                    border-b border-foreground">
+                    flex flex-row py-4 gap-2 justify-center items-center">
                         <div className="shrink-0 w-8 h-8 flex items-center justify-center">
-                            <ArrowRight color="#a15035" size={48}/>
+                            <ArrowRight color="#a15035" size={40}/>
                         </div>
                         <div>
                             <h3 className="font-bold text-base mb-2">GERENCIAMENTO COMPLETO DE REDES SOCIAIS</h3>
@@ -28,10 +27,9 @@ export default function Section02Banner() {
                         </div>
                     </div>
                     <div className="
-                    flex flex-row py-4 gap-2 justify-center items-center
-                    border-b border-foreground">
+                    flex flex-row py-4 gap-2 justify-center items-center">
                         <div className="shrink-0 w-8 h-8 flex items-center justify-center">
-                            <ArrowRight color="#a15035" size={48}/>
+                            <ArrowRight color="#a15035" size={40}/>
                         </div>
                         <div>
                             <h3 className="font-bold text-base mb-2">UNIVERSO DA MARCA</h3>
@@ -39,10 +37,9 @@ export default function Section02Banner() {
                         </div>
                     </div>
                     <div className="
-                    flex flex-row py-4 gap-2 justify-center items-center
-                    border-b border-foreground">
+                    flex flex-row py-4 gap-2 justify-center items-center">
                         <div className="shrink-0 w-8 h-8 flex items-center justify-center">
-                            <ArrowRight color="#a15035" size={48}/>
+                            <ArrowRight color="#a15035" size={40}/>
                         </div>
                         <div>
                             <h3 className="font-bold text-base mb-2">ESPAÇO CLIENTE</h3>
