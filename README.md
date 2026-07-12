@@ -1,38 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Template Social Media Pro — Landing Page
 
-## Getting Started
+Página de vendas do infoproduto **Template Social Media Pro**, do estúdio [OnzeOnze](https://www.instagram.com/studio.onzeonze?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==).
 
-First, run the development server:
+Landing page estática de conversão, com 9 seções e integração direta ao checkout da Hotmart.
+
+🔗 **Produção:** [templatesocialmediapro.com.br](https://templatesocialmediapro.com.br)
+
+---
+
+## Stack
+
+| Tecnologia | Uso |
+|---|---|
+| **Next.js 16** | Framework React com App Router e SSG |
+| **TypeScript** | Tipagem estrita |
+| **Tailwind CSS v4** | Estilização |
+| **shadcn/ui** | Componentes base |
+| **lucide-react** | Ícones |
+| **Cloudflare Pages** | Hospedagem e CDN |
+
+---
+
+## Rodando localmente
 
 ```bash
+# 1. Clone o repositório
+git clone https://github.com/PedroHammes/onzeonze-lp-tsmp.git
+cd onzeonze-lp-tsmp
+
+# 2. Instale as dependências
+npm install
+
+# 3. Rode o servidor de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O projeto ficará disponível em [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Build de produção
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+O output estático é gerado na pasta `out/`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Desafios e soluções técnicas
 
-## Deploy on Vercel
+### Deploy no Cloudflare Pages com Next.js 16
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+O caminho documentado para hospedar Next.js no Cloudflare Pages é o adapter `@cloudflare/next-on-pages`. Ao configurá-lo, encontrei três problemas:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Conflito de peer dependencies**: o adapter exige `@cloudflare/workers-types@4`, enquanto o `wrangler@4` exige a versão 5.
 
-ajuste
+2. **Recursão de build**: o `next-on-pages` chama `vercel build` internamente, que por sua vez chama `npm run build`. Com o script `build` apontando para o próprio adapter, o processo entrava em loop infinito.
+
+3. **Adapter deprecado**: o log de build na Cloudflare mostrou que o `@cloudflare/next-on-pages` foi descontinuado e atualizado para o OpenNext.
+
+**Solução:** em vez de contornar os conflitos com flags (`--legacy-peer-deps`, `overrides`), reavaliei a necessidade do adapter.
+
+O projeto é uma landing page **puramente estática** — sem rotas dinâmicas, sem API routes, sem Server Actions. Não há nada que exija runtime no servidor. O adapter existe para dar suporte a recursos que este projeto simplesmente não usa.
+
+A solução foi remover o adapter e usar o **static export nativo do Next.js**:
+
+```ts
+// next.config.ts
+const nextConfig: NextConfig = {
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
+};
+```
+
+O `images.unoptimized` é necessário porque o otimizador de imagens do Next.js depende de um servidor — inexistente em export estático.
+
+O build passou a gerar HTML/CSS/JS puro na pasta `out/`, servido diretamente pelo Cloudflare Pages. Sem adapter, sem conflito de dependências, sem camadas intermediárias.
+
+**Aprendizado:** nem todo problema de build precisa de mais ferramenta. Às vezes a solução é remover a ferramenta que não deveria estar ali.
